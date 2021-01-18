@@ -134,7 +134,7 @@ function main(){
     }
     */
     
-    document.getElementById ("score").innerHTML="Score: "+jugador.score;
+    document.getElementById ("score").innerHTML="Puntos: "+jugador.score;
     document.getElementById("new-score")
 }
 /*
