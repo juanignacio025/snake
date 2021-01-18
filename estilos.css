@@ -17,7 +17,7 @@ body{
 }
 
 .borde-nuevo{
-    border: 10px solid transparent;
+    border: 5px solid transparent;
     border-image: linear-gradient(45deg, red, yellow, green, orange, blue, purple, orange) 1!important;
     -webkit-background-size: 400% 400%;
     animation: animarBg 10s ease infinite !important;
@@ -210,5 +210,12 @@ canvas{
     canvas{
         border:10px solid yellow;
     }
+    .borde-nuevo{
+        border: 10px solid transparent;
+        border-image: linear-gradient(45deg, red, yellow, green, orange, blue, purple, orange) 1!important;
+        -webkit-background-size: 400% 400%;
+        animation: animarBg 10s ease infinite !important;
+    }
+    
     
 }
