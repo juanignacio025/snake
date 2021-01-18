@@ -68,13 +68,7 @@ function dibujar(){
         cvWidth=window.innerWidth*0.9
         ctx.clearRect(0,0, canvas.width, canvas.height);
     }
-    /*
-    canvas.height=window.innerHeight*0.5
-    canvas.width=window.innerWidth*0.9
-    cvHeight=window.innerHeight*0.5
-    cvWidth=window.innerWidth*0.9
-    ctx.clearRect(0,0, canvas.width, canvas.height);
-    */
+    
     
     //dibujo
     cabeza.dibujar(ctx);
@@ -92,23 +86,7 @@ function main(){
     choquePared();
     dibujar();
     movimiento();
-    /*
-    if(cabeza.choque(comida)){
-        comida.colocar();
-        cabeza.meter();
-        navigator.vibrate(100)
-        jugador.score+=10
-        canvas.classList.remove("borde-nuevo")
-        especial.borrar(ctx)
-    }else if(cabeza.choque(especial)){
-        especial.colocar()
-        cabeza.meter();
-        navigator.vibrate(300)
-        jugador.score+=20
-        canvas.classList.remove("borde-nuevo")
-        //canvas.style.bgColor="red"
-    }
-    */
+    
     if(cabeza.choque(comida)){
         comida.colocar();
         cabeza.meter();
@@ -126,27 +104,12 @@ function main(){
             canvas.classList.remove("borde-nuevo")
         }
     }
-    /*
-    if(cabeza.choque(comida) || cabeza.choque(especial)){
-        comida.colocar();
-        especial.colocar()
-        cabeza.meter();
-    }
-    */
+    
     
     document.getElementById ("score").innerHTML="Puntos: "+jugador.score;
     document.getElementById("new-score")
 }
-/*
-function obtenerScore(){
-    var contscore=jugador.score
-    return contscore
-}
-function aumentarVelocidad(){
-    var vel=jugador.velocidad
-    return vel
-}
-*/
+
 function up(){
     if(ejex){
         ydir=-tamano;
@@ -360,10 +323,7 @@ class Comida extends objeto{
             return num
         }
         
-       /*
-        let num = Math.floor(Math.random()*29)*10;
-        return num
-        */
+       
     }
     colocar(){
         this.x = this.generar();
@@ -374,8 +334,7 @@ class Comida extends objeto{
     }
     dibujar(ctx){
         ctx.fillStyle="lime"
-        //ctx.strokeStyle="#000"
-       // ctx.strokeRect(this.x, this.y, this.tamano, this.tamano);
+        
         
         ctx.shadowColor = "lime";
         ctx.shadowOffsetX = 0;   
@@ -394,18 +353,7 @@ class ComidaEspecial extends Comida{
     }
     
     dibujar(ctx){
-        /*
-        if(jugador.score%50==0 && jugador.score>0){
-        ctx.fillStyle="red"
-        ctx.shadowColor = "tomato";
-        ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 0;
-        ctx.shadowBlur = 15;
         
-        ctx.fillRect(this.x, this.y, this.tamano, this.tamano);
-        canvas.classList.add("borde-nuevo")
-        }
-        */
         ctx.fillStyle="red"
         ctx.shadowColor = "tomato";
         ctx.shadowOffsetX = 0;
