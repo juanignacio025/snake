@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+<link href = "https://fonts.googleapis.com/css2? family = Balsamiq + Sans & display = swap" rel = "hoja de estilo">
+    <link rel="stylesheet" href="estilos.css">
+    <script src = " https://cdn.jsdelivr.net/npm/sweetalert2@10 " > </script>
+    <title>Snake</title>
+</head>
+<body onkeydown="control(event)">
+   
+   
+
+   
+    <script src="snake.js"></script>
+    <div class="score-table">
+        
+    </div>
+    <div id="posicionar">
+        
+        <canvas id="canvas">
+        </canvas>
+         <div id="muestra"></div>
+        
+    </div>
+    
+   
+    <div id="scores">
+        <p id="score"></p>
+        <p>Máximo: <span id="new-max">--</p>
+    </div>
+     <div class="gamepad">
+         <div class="btn btn-1" onclick="up()">⬆️</div>
+         <div class="btn btn-2" onclick="right()">➡️</div>
+         <div class="btn btn-3" onclick="left()">⬅️</div>
+         <div class="btn btn-4" onclick="down()">⬇️</div>
+     </div>
+     
+         
+     <!--
+     <div id="mostrar-max">
+         <div id="score-max">
+             <h4>Máximo</h4>
+             <p id="new-max">--</p>
+         <div>
+     </div>
+     -->
+</body>
+</html>
